@@ -1,0 +1,16 @@
+C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\bin\Debug\net6.0-windows\GraphBase.exe
+C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\bin\Debug\net6.0-windows\GraphBase.deps.json
+C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\bin\Debug\net6.0-windows\GraphBase.runtimeconfig.json
+C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\bin\Debug\net6.0-windows\GraphBase.dll
+C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\bin\Debug\net6.0-windows\GraphBase.pdb
+C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\obj\Debug\net6.0-windows\GraphBase.Form1.resources
+C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\obj\Debug\net6.0-windows\GraphBase.csproj.GenerateResource.cache
+C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\obj\Debug\net6.0-windows\GraphBase.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\obj\Debug\net6.0-windows\GraphBase.AssemblyInfoInputs.cache
+C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\obj\Debug\net6.0-windows\GraphBase.AssemblyInfo.cs
+C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\obj\Debug\net6.0-windows\GraphBase.csproj.CoreCompileInputs.cache
+C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\obj\Debug\net6.0-windows\GraphBase.dll
+C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\obj\Debug\net6.0-windows\refint\GraphBase.dll
+C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\obj\Debug\net6.0-windows\GraphBase.pdb
+C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\obj\Debug\net6.0-windows\GraphBase.genruntimeconfig.cache
+C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\obj\Debug\net6.0-windows\ref\GraphBase.dll
