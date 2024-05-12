@@ -37,16 +37,16 @@
             comboBox1 = new ComboBox();
             button2 = new Button();
             button3 = new Button();
-            dataGridView1 = new DataGridView();
+            MatrixOnForm = new DataGridView();
             label1 = new Label();
             label2 = new Label();
-            dataGridView2 = new DataGridView();
             radioButton4 = new RadioButton();
-            numericUpDown1 = new NumericUpDown();
+            NodesNumber = new NumericUpDown();
             label3 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            saveFileDialog1 = new SaveFileDialog();
+            ((System.ComponentModel.ISupportInitialize)MatrixOnForm).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)NodesNumber).BeginInit();
             SuspendLayout();
             // 
             // button1
@@ -57,6 +57,7 @@
             button1.TabIndex = 0;
             button1.Text = "Calculate!";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // radioButton1
             // 
@@ -90,6 +91,7 @@
             radioButton3.TabStop = true;
             radioButton3.Text = "Move point";
             radioButton3.UseVisualStyleBackColor = true;
+            radioButton3.CheckedChanged += radioButton3_CheckedChanged;
             // 
             // contextMenuStrip1
             // 
@@ -117,6 +119,7 @@
             button2.TabIndex = 7;
             button2.Text = "Step by step";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -127,15 +130,18 @@
             button3.Text = "Save in file";
             button3.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // MatrixOnForm
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(6, 245);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(153, 67);
-            dataGridView1.TabIndex = 10;
+            MatrixOnForm.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            MatrixOnForm.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            MatrixOnForm.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            MatrixOnForm.Location = new Point(6, 244);
+            MatrixOnForm.Name = "MatrixOnForm";
+            MatrixOnForm.RowHeadersWidth = 51;
+            MatrixOnForm.RowTemplate.Height = 29;
+            MatrixOnForm.Size = new Size(184, 166);
+            MatrixOnForm.TabIndex = 10;
+            MatrixOnForm.CellEndEdit += MatrixOnForm_CellEndEdit;
             // 
             // label1
             // 
@@ -156,16 +162,6 @@
             label2.TabIndex = 12;
             label2.Text = "Method";
             // 
-            // dataGridView2
-            // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(6, 338);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowHeadersWidth = 51;
-            dataGridView2.RowTemplate.Height = 29;
-            dataGridView2.Size = new Size(157, 72);
-            dataGridView2.TabIndex = 13;
-            // 
             // radioButton4
             // 
             radioButton4.AutoSize = true;
@@ -177,14 +173,15 @@
             radioButton4.Text = "Connections";
             radioButton4.UseVisualStyleBackColor = true;
             // 
-            // numericUpDown1
+            // NodesNumber
             // 
-            numericUpDown1.Location = new Point(84, 188);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(79, 27);
-            numericUpDown1.TabIndex = 15;
-            numericUpDown1.MouseDown += numericUpDown1_MouseDown;
-            numericUpDown1.MouseUp += numericUpDown1_MouseUp;
+            NodesNumber.Location = new Point(84, 188);
+            NodesNumber.Name = "NodesNumber";
+            NodesNumber.Size = new Size(79, 27);
+            NodesNumber.TabIndex = 15;
+            NodesNumber.ValueChanged += NodesNumber_ValueChanged;
+            NodesNumber.MouseDown += numericUpDown1_MouseDown;
+            NodesNumber.MouseUp += numericUpDown1_MouseUp;
             // 
             // label3
             // 
@@ -199,14 +196,14 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
             ClientSize = new Size(800, 450);
             Controls.Add(label3);
-            Controls.Add(numericUpDown1);
+            Controls.Add(NodesNumber);
             Controls.Add(radioButton4);
-            Controls.Add(dataGridView2);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(dataGridView1);
+            Controls.Add(MatrixOnForm);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(comboBox1);
@@ -216,9 +213,11 @@
             Controls.Add(button1);
             Name = "Form1";
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            MouseClick += Form1_MouseClick;
+            MouseDown += Form1_MouseDown;
+            MouseUp += Form1_MouseUp;
+            ((System.ComponentModel.ISupportInitialize)MatrixOnForm).EndInit();
+            ((System.ComponentModel.ISupportInitialize)NodesNumber).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -233,12 +232,13 @@
         private ComboBox comboBox1;
         private Button button2;
         private Button button3;
-        private DataGridView dataGridView1;
+        private DataGridView MatrixOnForm;
         private Label label1;
         private Label label2;
-        private DataGridView dataGridView2;
         private RadioButton radioButton4;
-        private NumericUpDown numericUpDown1;
+        private NumericUpDown NodesNumber;
         private Label label3;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private SaveFileDialog saveFileDialog1;
     }
 }

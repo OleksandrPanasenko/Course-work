@@ -10,7 +10,7 @@ namespace GraphBase
             if(from>=Size||to>=Size){
                 throw new ArgumentException("element out of range");
             }
-            return !double.IsInfinity(Matrix[to,from]);
+            return !float.IsInfinity(Matrix[to,from]);
         }
         public float[,] Matrix;
         public bool[,] minTree;
@@ -39,8 +39,8 @@ namespace GraphBase
             nodes.Add(new Node());
             bool[,] NewMinTree=new bool[Size,Size];
             float[,] newMatrix=new float[Size,Size];
-            for(int i=0;i<Size-1;i++){
-                for(int j=0;j<Size;i++){
+            for(int i=0;i<Size;i++){
+                for(int j=0;j<Size;j++){
                     if(j==Size-1||i==Size-1){
                         NewMinTree[i,j]=false;
                         newMatrix[i,j]=inf;
