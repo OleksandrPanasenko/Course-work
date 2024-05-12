@@ -2,7 +2,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Security.Cryptography.Xml;
 using System.Windows.Forms;
 namespace GraphBase{
-    class GraphGrafics : GraphSolver
+    public class GraphGrafics : GraphSolver
     {
         public int cornerX = 250;
         public int cornerY=100;
@@ -193,8 +193,11 @@ namespace GraphBase{
                     CheckAndSelectNode(e);
                     if (selectedNode >= 0 && selectedNode != Start)
                     {
-                        AddEdge(Start, selectedNode, 10);// add window in there
+                        AskForLength.row = selectedNode;
+                        AskForLength.column = Start;
+                        new AskForLength();
                         DrawGraph();
+                        AskForLength.askForLength.Show();
                     }
                 }
             }

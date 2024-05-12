@@ -1,7 +1,14 @@
 using System.Security.Claims;
 
 namespace GraphBase{
-    class GraphSolver:Graph{
+    public class GraphSolver:Graph{
+        public float EdgeProbability=((float)1)/3;
+        public int MaxRandomLength = 100;
+        private bool RandomConnect()
+        {
+            Random rand=new Random();
+            return (rand.NextDouble() < EdgeProbability) ;
+        }
         public GraphSolver(int size) : base(size)
         {
             Matrix = new float[size, size];
@@ -111,7 +118,7 @@ namespace GraphBase{
         }
         public void Boruvka(){
             float[,] MinVertices=new float[Size,3];
-            
+            int count = 0;//delete this
             int GoalConnectivity=ConnectivityBase();
             ConnectivityBackbone();
             do{
@@ -138,10 +145,29 @@ namespace GraphBase{
                 }
                 for(int i=0;i<Size;i++){
                     if(MinVertices[i,0]>=0&&MinVertices[i,1]>=0){
-                        AddEdge((int)MinVertices[i,0],(int)MinVertices[i,1],MinVertices[i,2]);
+                        minTree[(int)MinVertices[i, 0], (int)MinVertices[i, 1]] = true;
                     }
                 }
-            }while(GoalConnectivity!=ConnectivityBackbone());
+                count++;
+            }while(count<1000&&GoalConnectivity<ConnectivityBackbone());
+            if (count == 1000)
+            {
+                MessageBox.Show($"Too much calculations: base has {ConnectivityBase()} and backbone {ConnectivityBackbone()} groups");
+            }
+        }
+        public void RandomGraph()
+        {
+            Random random = new Random();
+            for(int i = 1; i < Size; i++) {
+                for(int j=0;j<=i; j++)
+                {
+                    if (i != j && RandomConnect())
+                    {
+                        AddEdge(i, j, random.Next(MaxRandomLength) + 1);
+                    }
+                    else AddEdge(i, j, inf);
+                }
+            }
         }
     }
 }

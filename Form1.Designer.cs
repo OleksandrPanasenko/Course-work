@@ -45,6 +45,7 @@
             label3 = new Label();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             saveFileDialog1 = new SaveFileDialog();
+            button4 = new Button();
             ((System.ComponentModel.ISupportInitialize)MatrixOnForm).BeginInit();
             ((System.ComponentModel.ISupportInitialize)NodesNumber).BeginInit();
             SuspendLayout();
@@ -113,25 +114,28 @@
             // 
             // button2
             // 
-            button2.Location = new Point(540, 15);
+            button2.Location = new Point(678, 17);
             button2.Name = "button2";
             button2.Size = new Size(90, 66);
             button2.TabIndex = 7;
-            button2.Text = "Step by step";
+            button2.Text = "Get from file";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
             // button3
             // 
-            button3.Location = new Point(656, 17);
+            button3.Location = new Point(567, 17);
             button3.Name = "button3";
             button3.Size = new Size(80, 64);
             button3.TabIndex = 8;
             button3.Text = "Save in file";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // MatrixOnForm
             // 
+            MatrixOnForm.AllowUserToAddRows = false;
+            MatrixOnForm.AllowUserToDeleteRows = false;
             MatrixOnForm.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             MatrixOnForm.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             MatrixOnForm.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -175,7 +179,7 @@
             // 
             // NodesNumber
             // 
-            NodesNumber.Location = new Point(84, 188);
+            NodesNumber.Location = new Point(79, 183);
             NodesNumber.Name = "NodesNumber";
             NodesNumber.Size = new Size(79, 27);
             NodesNumber.TabIndex = 15;
@@ -192,12 +196,23 @@
             label3.TabIndex = 16;
             label3.Text = "Vertices";
             // 
+            // button4
+            // 
+            button4.Location = new Point(459, 17);
+            button4.Name = "button4";
+            button4.Size = new Size(93, 64);
+            button4.TabIndex = 17;
+            button4.Text = "Random Graph";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             ClientSize = new Size(800, 450);
+            Controls.Add(button4);
             Controls.Add(label3);
             Controls.Add(NodesNumber);
             Controls.Add(radioButton4);
@@ -213,6 +228,7 @@
             Controls.Add(button1);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             MouseClick += Form1_MouseClick;
             MouseDown += Form1_MouseDown;
             MouseUp += Form1_MouseUp;
@@ -240,5 +256,6 @@
         private Label label3;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private SaveFileDialog saveFileDialog1;
+        private Button button4;
     }
 }

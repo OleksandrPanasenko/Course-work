@@ -5,11 +5,13 @@ namespace GraphBase
 {
     public partial class Form1 : Form
     {
-        GraphGrafics graph;
+        public static Form1 MainForm;
+        public static GraphGrafics graph;
         Graphics g;
         public Form1()
         {
             InitializeComponent();
+            MainForm = this;
             g = CreateGraphics();
             graph = new GraphGrafics(g);
         }
@@ -221,6 +223,30 @@ namespace GraphBase
                     }
             }
             graph.DrawGraph();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            comboBox1.SelectedIndex = 0;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if(NodesNumber.Value == 0)
+            {
+                MessageBox.Show("Please add points manually or through 'Vertices' box");
+            }
+            else if(NodesNumber.Value >0) {
+                graph.RandomGraph();
+                FillTable();
+                graph.DrawGraph();
+            }
+            
         }
     }
 }
