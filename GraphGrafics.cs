@@ -4,8 +4,9 @@ using System.Windows.Forms;
 namespace GraphBase{
     public class GraphGrafics : GraphSolver
     {
-        public int cornerX = 250;
-        public int cornerY=100;
+        public PictureBox canvas;
+        public int cornerX = 0;
+        public int cornerY=0;
         public GraphGrafics(int size,Graphics g) : base(size)
         {
             this.g = g;
@@ -60,6 +61,7 @@ namespace GraphBase{
 
                     }
                 }
+                canvas.Invalidate();
 
             }
             for(int i = 0; i < Size; i++)
@@ -136,14 +138,16 @@ namespace GraphBase{
         public void CheckAndSelectNode(MouseEventArgs e)
         {
             int minNode=ClosestPoint(e.X, e.Y);
-            if (DistanceBetweenPoints(e.X,e.Y,nodes[minNode].x,nodes[minNode].y) <= radius)
-            {
-                selectedNode = minNode;
-                DrawGraph();
-            }
-            else
-            {
-                selectedNode = -1;
+            if(minNode >= 0){
+                if (DistanceBetweenPoints(e.X, e.Y, nodes[minNode].x, nodes[minNode].y) <= radius)
+                {
+                    selectedNode = minNode;
+                    DrawGraph();
+                }
+                else
+                {
+                    selectedNode = -1;
+                }
             }
         }
         private int ClosestPoint(int x,  int y)

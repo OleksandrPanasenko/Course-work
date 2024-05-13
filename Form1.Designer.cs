@@ -46,8 +46,12 @@
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             saveFileDialog1 = new SaveFileDialog();
             button4 = new Button();
+            button5 = new Button();
+            openFileDialog1 = new OpenFileDialog();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)MatrixOnForm).BeginInit();
             ((System.ComponentModel.ISupportInitialize)NodesNumber).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // button1
@@ -114,9 +118,9 @@
             // 
             // button2
             // 
-            button2.Location = new Point(678, 17);
+            button2.Location = new Point(709, 12);
             button2.Name = "button2";
-            button2.Size = new Size(90, 66);
+            button2.Size = new Size(90, 71);
             button2.TabIndex = 7;
             button2.Text = "Get from file";
             button2.UseVisualStyleBackColor = true;
@@ -124,11 +128,11 @@
             // 
             // button3
             // 
-            button3.Location = new Point(567, 17);
+            button3.Location = new Point(612, 12);
             button3.Name = "button3";
-            button3.Size = new Size(80, 64);
+            button3.Size = new Size(91, 71);
             button3.TabIndex = 8;
-            button3.Text = "Save in file";
+            button3.Text = "Save matrix in file";
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
@@ -196,15 +200,46 @@
             label3.TabIndex = 16;
             label3.Text = "Vertices";
             // 
+            // saveFileDialog1
+            // 
+            saveFileDialog1.FileOk += saveFileDialog1_FileOk;
+            // 
             // button4
             // 
-            button4.Location = new Point(459, 17);
+            button4.Location = new Point(425, 12);
             button4.Name = "button4";
-            button4.Size = new Size(93, 64);
+            button4.Size = new Size(93, 71);
             button4.TabIndex = 17;
             button4.Text = "Random Graph";
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
+            // 
+            // button5
+            // 
+            button5.Location = new Point(524, 12);
+            button5.Name = "button5";
+            button5.Size = new Size(82, 71);
+            button5.TabIndex = 18;
+            button5.Text = "Save picture";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
+            // 
+            // openFileDialog1
+            // 
+            openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(187, 78);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(612, 370);
+            pictureBox1.TabIndex = 19;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
+            pictureBox1.Paint += pictureBox1_Paint;
+            pictureBox1.MouseClick += pictureBox1_MouseClick;
+            pictureBox1.MouseDown += pictureBox1_MouseDown;
+            pictureBox1.MouseUp += pictureBox1_MouseUp;
             // 
             // Form1
             // 
@@ -212,6 +247,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             ClientSize = new Size(800, 450);
+            Controls.Add(pictureBox1);
+            Controls.Add(button5);
             Controls.Add(button4);
             Controls.Add(label3);
             Controls.Add(NodesNumber);
@@ -234,6 +271,7 @@
             MouseUp += Form1_MouseUp;
             ((System.ComponentModel.ISupportInitialize)MatrixOnForm).EndInit();
             ((System.ComponentModel.ISupportInitialize)NodesNumber).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -257,5 +295,8 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private SaveFileDialog saveFileDialog1;
         private Button button4;
+        private Button button5;
+        private OpenFileDialog openFileDialog1;
+        private PictureBox pictureBox1;
     }
 }

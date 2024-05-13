@@ -117,6 +117,7 @@ namespace GraphBase{
             }
         }
         public void Boruvka(){
+            ClearBackbone();
             float[,] MinVertices=new float[Size,3];
             int count = 0;//delete this
             int GoalConnectivity=ConnectivityBase();

@@ -35,7 +35,9 @@
             button3 = new Button();
             button4 = new Button();
             button5 = new Button();
+            pictureBox2 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // button1
@@ -73,7 +75,7 @@
             button3.Name = "button3";
             button3.Size = new Size(101, 75);
             button3.TabIndex = 3;
-            button3.Text = "Save to file (only solution)";
+            button3.Text = "Save to file (solution only)";
             button3.UseVisualStyleBackColor = true;
             // 
             // button4
@@ -94,11 +96,20 @@
             button5.Text = "Complexity data";
             button5.UseVisualStyleBackColor = true;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.Location = new Point(779, 117);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(718, 465);
+            pictureBox2.TabIndex = 7;
+            pictureBox2.TabStop = false;
+            // 
             // Solution
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1524, 708);
+            ClientSize = new Size(1524, 605);
+            Controls.Add(pictureBox2);
             Controls.Add(button5);
             Controls.Add(button4);
             Controls.Add(button3);
@@ -108,6 +119,7 @@
             Name = "Solution";
             Text = "Solution";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
         }
 
@@ -120,5 +132,6 @@
         private Button button3;
         private Button button4;
         private Button button5;
+        private PictureBox pictureBox2;
     }
 }

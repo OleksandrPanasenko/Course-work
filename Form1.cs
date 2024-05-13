@@ -6,14 +6,18 @@ namespace GraphBase
     public partial class Form1 : Form
     {
         public static Form1 MainForm;
-        public static GraphGrafics graph;
+        public static FileGraph graph;
+        private Bitmap canvas;
         Graphics g;
         public Form1()
         {
             InitializeComponent();
             MainForm = this;
-            g = CreateGraphics();
-            graph = new GraphGrafics(g);
+            canvas = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+            g = Graphics.FromImage(canvas);
+            pictureBox1.Image = canvas;
+            graph = new FileGraph(g);
+            graph.canvas = pictureBox1;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -43,16 +47,7 @@ namespace GraphBase
 
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
-            if (radioButton3.Checked)
-            {
-                graph.Mode = 3;
-                graph.StartMoving(e);
-            }
-            else if (radioButton4.Checked)
-            {
-                graph.Mode = 4;
-                graph.StartEdge(e);
-            }
+
 
         }
         private void FillTable()
@@ -71,7 +66,9 @@ namespace GraphBase
                 else
                 {
                     MatrixOnForm.Columns.RemoveAt(i - 1);
-                    MatrixOnForm.Rows.RemoveAt(i - 1);
+                    if(MatrixOnForm.Rows.Count>1){
+                        MatrixOnForm.Rows.RemoveAt(i - 1);
+                    }
                 }
             }
             /*for (int i = 0; i < graph.Size; i++)
@@ -94,35 +91,13 @@ namespace GraphBase
 
         private void Form1_MouseClick(object sender, MouseEventArgs e)
         {
-            if (radioButton1.Checked)
-            {
-                graph.Mode = 1;
-                graph.NewDot(e);
-                FillTable();
-            }
-            else if (radioButton2.Checked)
-            {
-                graph.Mode = 2;
-                graph.DeleteDot(e);
-                FillTable();
-            }
-            NodesNumber.Value = (graph.Size);
+
 
         }
 
         private void Form1_MouseUp(object sender, MouseEventArgs e)
         {
-            if (radioButton3.Checked)
-            {
-                graph.Mode = 3;
-                graph.EndMoving(e);
-            }
-            else if (radioButton4.Checked)
-            {
-                graph.Mode = 4;
-                graph.EndEdge(e);
-                FillTable();
-            }
+
 
         }
 
@@ -141,20 +116,18 @@ namespace GraphBase
             {
                 while (NodesNumber.Value > graph.Size)
                 {
-                    graph.NewRandomDot(graph.cornerX, ClientSize.Width - graph.radius, graph.cornerY, ClientSize.Height - graph.radius);
+                    graph.NewRandomDot(graph.cornerX + graph.radius, pictureBox1.Width - graph.radius, graph.cornerY + graph.radius, pictureBox1.Height - graph.radius);
                 }
             }
             FillTable();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string str = "";
-            for (int i = 0; i < graph.Size; i++)
-            {
-                str += $"{i}. Node-{graph.nodes[i].x};{graph.nodes[i].y}\n";
-            }
-            MessageBox.Show(str);
+            graph.GetGraphMatrix(NodesNumber);
+            NodesNumber.Value = (graph.Size);
+            graph.DrawGraph();
         }
 
         private void MatrixOnForm_CellEndEdit(object sender, DataGridViewCellEventArgs e)
@@ -227,8 +200,9 @@ namespace GraphBase
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            graph.SaveGraphMatrix();
         }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -237,15 +211,82 @@ namespace GraphBase
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if(NodesNumber.Value == 0)
+            if (NodesNumber.Value == 0)
             {
                 MessageBox.Show("Please add points manually or through 'Vertices' box");
             }
-            else if(NodesNumber.Value >0) {
+            else if (NodesNumber.Value > 0)
+            {
                 graph.RandomGraph();
                 FillTable();
                 graph.DrawGraph();
             }
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            graph.SaveImageGraph(canvas);
+        }
+
+        private void saveFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (radioButton3.Checked)
+            {
+                graph.Mode = 3;
+                graph.StartMoving(e);
+            }
+            else if (radioButton4.Checked)
+            {
+                graph.Mode = 4;
+                graph.StartEdge(e);
+            }
+        }
+
+        private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (radioButton1.Checked)
+            {
+                graph.Mode = 1;
+                graph.NewDot(e);
+                FillTable();
+            }
+            else if (radioButton2.Checked)
+            {
+                graph.Mode = 2;
+                graph.DeleteDot(e);
+                FillTable();
+            }
+            NodesNumber.Value = (graph.Size);
+        }
+
+        private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (radioButton3.Checked)
+            {
+                graph.Mode = 3;
+                graph.EndMoving(e);
+            }
+            else if (radioButton4.Checked)
+            {
+                graph.Mode = 4;
+                graph.EndEdge(e);
+                FillTable();
+            }
+        }
+
+        private void pictureBox1_Paint(object sender, PaintEventArgs e)
+        {
             
         }
     }

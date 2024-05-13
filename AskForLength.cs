@@ -97,7 +97,8 @@ namespace GraphBase
 
         private void AskForLength_FormClosing(object sender, FormClosingEventArgs e)
         {
-           Form1.MainForm.Enabled = true;
+            Form1.MainForm.Enabled = true;
+            Form1.graph.DrawGraph();
         }
     }
 }
