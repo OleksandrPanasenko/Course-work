@@ -30,6 +30,7 @@ namespace GraphBase
             Form1.graph.canvas = pictureBox2;
             Form1.graph.g = Graphics.FromImage(canvas); ;
             Form1.MainForm.Enabled = false;
+            label1.Text = Form1.MainForm.comboBox.SelectedItem as string;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -122,6 +123,12 @@ namespace GraphBase
             }
             new Step_by_step();
             Step_by_step.step_By_Step.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            new Stats();
+            Stats.statsForm.Show();
         }
     }
 }

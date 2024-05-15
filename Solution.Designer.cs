@@ -37,6 +37,7 @@
             button5 = new Button();
             pictureBox2 = new PictureBox();
             button6 = new Button();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -65,6 +66,8 @@
             // 
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.EditMode = DataGridViewEditMode.EditOnEnter;
             dataGridView1.ImeMode = ImeMode.Off;
@@ -104,6 +107,7 @@
             button5.TabIndex = 5;
             button5.Text = "Complexity data";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // pictureBox2
             // 
@@ -115,7 +119,7 @@
             // 
             // button6
             // 
-            button6.Location = new Point(339, 33);
+            button6.Location = new Point(337, 33);
             button6.Name = "button6";
             button6.Size = new Size(119, 30);
             button6.TabIndex = 8;
@@ -123,11 +127,22 @@
             button6.UseVisualStyleBackColor = true;
             button6.Click += button6_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(813, 33);
+            label1.Name = "label1";
+            label1.Size = new Size(130, 54);
+            label1.TabIndex = 9;
+            label1.Text = "label1";
+            // 
             // Solution
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1524, 605);
+            Controls.Add(label1);
             Controls.Add(button6);
             Controls.Add(pictureBox2);
             Controls.Add(button5);
@@ -143,6 +158,7 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -156,5 +172,6 @@
         private Button button5;
         private PictureBox pictureBox2;
         private Button button6;
+        private Label label1;
     }
 }

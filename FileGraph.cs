@@ -113,9 +113,30 @@ namespace GraphBase
                 file.Dispose();
             }
         }
+        private void GraphResizeFit()
+        {
+            int xMin, xMax, yMin, yMax;
+            xMin = xMax = nodes[0].x;
+            yMin = yMax = nodes[0].y;
+            foreach(Node node in nodes)
+            {
+                if(node.x < xMin) xMin = node.x;
+                if(node.y < yMin) yMin = node.y;
+                if(node.x > xMax) xMax = node.x;
+                if(node.y > yMax) yMax = node.y;
+            }
+            float xCoefficient=(canvas.Width - 2 * radius) /(xMax-xMin);
+            float yCoefficient=(canvas.Height - 2 * radius) /(yMax-yMin);
+            for (int i = 0;i < Size; i++)
+            {
+                nodes[i].x = (int)((nodes[i].x - xMin) * xCoefficient)+radius;
+                nodes[i].y = (int)((nodes[i].y - yMin) * yCoefficient)+radius;
+            }
+        }
         public void GetGraphMatrix(NumericUpDown upDown)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "text files .txt|*.TXT";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 float[,] CopyMatrix = new float[0, 0];
@@ -126,35 +147,45 @@ namespace GraphBase
                 {
                     if (Int32.TryParse(file.ReadLine(), out number) && number > 0)
                     {
-                        CopyMatrix = new float[number, number];
+                        if (number > MaxNodes)
+                        {
+                            CopyMatrix = new float[MaxNodes, MaxNodes];
+                            MessageBox.Show($"Matrix was cut to {MaxNodes} vertices due to being too large");
+                        }
+                        else
+                        {
+                            CopyMatrix = new float[number, number];
+                        }                         
                     }
                     else
                     {
-                        MessageBox.Show("File invalid! Graph size must be positive integer!");
-                        number = 0;
+                        throw new FileFormatException("File invalid! Graph size must be positive integer!");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("File is empty or non-existent");
+                    throw new FileFormatException("File is empty or non-existent");
                 }
                 for (int i = 0; i < number && file != null; i++)
                 {
                     string[] T = file.ReadLine().Split();
-                    if (T.Length != number && !((T.Length == number + 1) && T[number] == ""))
+                    if (number <= MaxNodes)
                     {
-                        throw new FileFormatException($"row {i + 1} argument number{T.Length}!={number} last member {T[number]} next line {file.ReadLine()}");
-                    }
-                    for (int j = 0; j < number; j++)
-                    {
-                        float f = 0;
-                        if (float.TryParse(T[j], out f))
+                        if (T.Length <= number)
                         {
-                            CopyMatrix[i, j] = f;
+                            throw new FileFormatException($"row {i + 1} argument number{T.Length - 1}less than initially stated{number}");
                         }
-                        else
+                        for (int j = 0; j < number&&j<MaxNodes; j++)
                         {
-                            throw new FileFormatException("non-numerical detected");
+                            float f = 0;
+                            if (float.TryParse(T[j], out f))
+                            {
+                                CopyMatrix[i, j] = f;
+                            }
+                            else
+                            {
+                                throw new FileFormatException($"non-numerical detected at row {i + 1} column {j + 1}");
+                            }
                         }
                     }
                 }
@@ -167,7 +198,7 @@ namespace GraphBase
                     upDown.Value=number;
                     Matrix = CopyMatrix;
                 }
-                for (int i = 0; i < number && !file.EndOfStream; i++)
+                for (int i = 0; i < number &&i<MaxNodes&& !file.EndOfStream; i++)
                 {
                     string[] T = file.ReadLine().Split();
                     int node, x, y;
@@ -181,6 +212,7 @@ namespace GraphBase
                         }
                     }
                 }
+                GraphResizeFit();
                 DrawGraph();
                 file.Close();
 
@@ -211,15 +243,66 @@ namespace GraphBase
             }
             return true;
         }
-
+        internal void SaveHistoryText()
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "text file .txt|*.TXT";
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                string path = sfd.FileName;
+                StreamWriter file = new StreamWriter(File.Create(path));
+                string toFile = "";
+                for (int slide = 0; slide < HistoryExplanation.Count; slide++)
+                {
+                    toFile += $"Step {slide}\n";
+                    toFile += HistoryExplanation.Count;
+                    toFile += "\n\n";
+                    file.Write(toFile);
+                }
+                file.Close();
+                file.Dispose();
+            }
+        }
         internal void SaveImageGraph(Bitmap canvas)
         {
             SaveFileDialog sfd = new SaveFileDialog();
-            sfd.Filter = "*.BMP|*.BMP| *.JPG|*.JPG| *.GIF|*.GIF| *.PNG|*.PNG";
+            sfd.Filter = "*.PNG|*.PNG| *.JPG|*.JPG| *.GIF|*.GIF| *.BMP|*.BMP";
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 string path = sfd.FileName;
                 canvas.Save(path,ImageFormat.Png);
+            }
+        }
+        internal void SaveSlideText(int Slide)
+        {
+            bool[,] buffer = minTree;
+            minTree = History[Slide];
+            SaveSolutionText();
+            minTree = buffer;
+        }
+        internal void SaveHistoryFolder(Bitmap canvas)
+        {
+            FolderBrowserDialog sfd= new FolderBrowserDialog();
+            sfd.ShowNewFolderButton = true;
+            sfd.Description = "Choose an empty folder";
+            sfd.ShowDialog();
+            string directoryPath = sfd.SelectedPath;
+            if (directoryPath != (string)null&&directoryPath!="")
+            {
+                if (!Directory.Exists(directoryPath))
+                {
+                    Directory.CreateDirectory(directoryPath);
+                }
+                else if (Directory.EnumerateFileSystemEntries(directoryPath).Any())
+                {
+                    MessageBox.Show($"Directory has {Directory.EnumerateFileSystemEntries(directoryPath).Count()} files already");
+                    return;
+                }
+                for (int i = 0; i < History.Count; i++)
+                {
+                    DrawFromHistory(i);
+                    canvas.Save(directoryPath + $"\\\\Slide{i}.png", ImageFormat.Png);
+                }
             }
         }
     }

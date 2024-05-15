@@ -1,4 +1,5 @@
-﻿namespace GraphBase
+﻿
+namespace GraphBase
 {
     partial class Step_by_step
     {
@@ -32,13 +33,14 @@
             button2 = new Button();
             label1 = new Label();
             label2 = new Label();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
+            CloseButton = new Button();
+            SaveSlideTextButton = new Button();
+            SaveHistoryTextButton = new Button();
             button6 = new Button();
-            button7 = new Button();
+            SaveHistoryImageButton = new Button();
             pictureBox1 = new PictureBox();
             dataGridView1 = new DataGridView();
+            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -68,64 +70,66 @@
             label1.AutoSize = true;
             label1.Location = new Point(69, 88);
             label1.Name = "label1";
-            label1.Size = new Size(50, 20);
+            label1.Size = new Size(18, 20);
             label1.TabIndex = 3;
-            label1.Text = "label1";
+            label1.Text = "#";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Location = new Point(439, 9);
             label2.Name = "label2";
-            label2.Size = new Size(50, 20);
+            label2.Size = new Size(81, 20);
             label2.TabIndex = 4;
-            label2.Text = "label2";
+            label2.Text = "Save in file";
             // 
-            // button3
+            // CloseButton
             // 
-            button3.Location = new Point(196, 16);
-            button3.Name = "button3";
-            button3.Size = new Size(76, 57);
-            button3.TabIndex = 5;
-            button3.Text = "close";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            CloseButton.Location = new Point(196, 16);
+            CloseButton.Name = "CloseButton";
+            CloseButton.Size = new Size(76, 57);
+            CloseButton.TabIndex = 5;
+            CloseButton.Text = "close";
+            CloseButton.UseVisualStyleBackColor = true;
+            CloseButton.Click += button3_Click;
             // 
-            // button4
+            // SaveSlideTextButton
             // 
-            button4.Location = new Point(340, 57);
-            button4.Name = "button4";
-            button4.Size = new Size(89, 62);
-            button4.TabIndex = 6;
-            button4.Text = "button4";
-            button4.UseVisualStyleBackColor = true;
+            SaveSlideTextButton.Location = new Point(389, 47);
+            SaveSlideTextButton.Name = "SaveSlideTextButton";
+            SaveSlideTextButton.Size = new Size(89, 72);
+            SaveSlideTextButton.TabIndex = 6;
+            SaveSlideTextButton.Text = "Current position (text)";
+            SaveSlideTextButton.UseVisualStyleBackColor = true;
+            SaveSlideTextButton.Click += button4_Click;
             // 
-            // button5
+            // SaveHistoryTextButton
             // 
-            button5.Location = new Point(484, 57);
-            button5.Name = "button5";
-            button5.Size = new Size(91, 62);
-            button5.TabIndex = 7;
-            button5.Text = "button5";
-            button5.UseVisualStyleBackColor = true;
+            SaveHistoryTextButton.Location = new Point(484, 47);
+            SaveHistoryTextButton.Name = "SaveHistoryTextButton";
+            SaveHistoryTextButton.Size = new Size(91, 72);
+            SaveHistoryTextButton.TabIndex = 7;
+            SaveHistoryTextButton.Text = "Whole solution (text)";
+            SaveHistoryTextButton.Click += SaveHistoryTextButton_Click;
             // 
             // button6
             // 
-            button6.Location = new Point(345, 134);
+            button6.Location = new Point(389, 125);
             button6.Name = "button6";
-            button6.Size = new Size(84, 55);
+            button6.Size = new Size(89, 75);
             button6.TabIndex = 8;
-            button6.Text = "button6";
+            button6.Text = "Current (image)";
             button6.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // SaveHistoryImageButton
             // 
-            button7.Location = new Point(484, 125);
-            button7.Name = "button7";
-            button7.Size = new Size(82, 59);
-            button7.TabIndex = 9;
-            button7.Text = "button7";
-            button7.UseVisualStyleBackColor = true;
+            SaveHistoryImageButton.Location = new Point(484, 125);
+            SaveHistoryImageButton.Name = "SaveHistoryImageButton";
+            SaveHistoryImageButton.Size = new Size(91, 75);
+            SaveHistoryImageButton.TabIndex = 9;
+            SaveHistoryImageButton.Text = "All solution (image)";
+            SaveHistoryImageButton.UseVisualStyleBackColor = true;
+            SaveHistoryImageButton.Click += SaveHistoryImageButton_Click;
             // 
             // pictureBox1
             // 
@@ -137,26 +141,42 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(12, 206);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
             dataGridView1.Size = new Size(693, 469);
             dataGridView1.TabIndex = 11;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(24, 135);
+            label3.Name = "label3";
+            label3.Size = new Size(124, 41);
+            label3.TabIndex = 12;
+            label3.Text = "Method";
             // 
             // Step_by_step
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1432, 688);
+            Controls.Add(label3);
             Controls.Add(dataGridView1);
             Controls.Add(pictureBox1);
-            Controls.Add(button7);
+            Controls.Add(SaveHistoryImageButton);
             Controls.Add(button6);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(button3);
+            Controls.Add(SaveHistoryTextButton);
+            Controls.Add(SaveSlideTextButton);
+            Controls.Add(CloseButton);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(button2);
@@ -171,18 +191,24 @@
             PerformLayout();
         }
 
+        private void SaveHistoryButton_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
 
         private Button button1;
         private Button button2;
         private Label label1;
         private Label label2;
-        private Button button3;
-        private Button button4;
-        private Button button5;
+        private Button CloseButton;
+        private Button SaveSlideTextButton;
+        private Button SaveHistoryTextButton;
         private Button button6;
-        private Button button7;
+        private Button SaveHistoryImageButton;
         private PictureBox pictureBox1;
         private DataGridView dataGridView1;
+        private Label label3;
     }
 }

@@ -147,15 +147,22 @@ namespace GraphBase{
                 g.FillEllipse(new SolidBrush(colors[nodes[i].color]), shape);
                 g.DrawString($"{i + 1}", lengthFont, VerticeTextBrush, new Point(x - lengthFont.Height / 2, y - lengthFont.Height / 2));
             }
+            g.DrawString($"{this.HistoryExplanation[Slide]}", lengthFont, VerticeTextBrush, new Point(10, (int)((float)canvas.Height * 0.75)));
         }
 
         public void NewDot(MouseEventArgs e) 
         {
-            AddNode();
-            nodes[Size - 1].x = e.X;
-            nodes[Size - 1].y = e.Y;
+            if (Size >= MaxNodes)
+            {
+                MessageBox.Show("Can't add new dot! Maximum reached!");
+            }
+            else
+            {
+                AddNode();
+                nodes[Size - 1].x = e.X;
+                nodes[Size - 1].y = e.Y;
+            }
             DrawGraph();
-
         }
         public void NewRandomDot(int left, int right, int up, int down)
         {
@@ -230,12 +237,32 @@ namespace GraphBase{
                 CheckAndSelectNode(e);
             }
         }
+        
         public void EndMoving(MouseEventArgs e)
         {
+            int xNew=e.X;
+            int yNew=e.Y;
+            int movingNode = selectedNode;
             if (selectedNode >= 0)
             {
-                nodes[selectedNode].x = e.X;
-                nodes[selectedNode].y = e.Y;
+                CheckAndSelectNode(e);
+                int obstacle = selectedNode;
+                if (obstacle != selectedNode || DistanceBetweenPoints(nodes[obstacle].x, nodes[obstacle].y, xNew, yNew) >= radius * 2)
+                {
+                    if (xNew >= 0 && xNew >= 0 && xNew <= canvas.Width && xNew <= canvas.Height)
+                    {
+                        nodes[movingNode].x = xNew;
+                        nodes[movingNode].y = yNew;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Dots must remain within window!");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Dots should not overlap!");
+                }
                 selectedNode = -1;
                 DrawGraph();
             }

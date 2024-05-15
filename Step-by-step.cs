@@ -16,7 +16,9 @@ namespace GraphBase
         public static Graphics g;
         public static Step_by_step step_By_Step;
         public static Bitmap canvas;
-        public int NumberSlides { get
+        public int NumberSlides
+        {
+            get
             { return Form1.graph.History.Count; }
         }
         public Step_by_step()
@@ -30,7 +32,10 @@ namespace GraphBase
             Form1.graph.canvas = pictureBox1;
             Form1.graph.g = Graphics.FromImage(canvas); ;
             Solution.solution.Enabled = false;
-            Form1.graph.FillDotColors();
+            Form1.graph.FillDotColors();    
+            SaveHistoryTextButton.Enabled = Form1.graph.History.Count>50?false:true;
+            label3.Text = Form1.MainForm.comboBox.SelectedItem as string;
+            label3.Text += "'s algorithm";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -98,10 +103,26 @@ namespace GraphBase
 
         private void Step_by_step_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Form1.graph.g = g;
-            Form1.graph.canvas= Solution.solution.pictureBox;
-            Form1.graph.minTree = Form1.graph.History[NumberSlides - 1];
             Solution.solution.Enabled = true;
+            Form1.graph.g = g;
+            Form1.graph.canvas = Solution.solution.pictureBox;
+            Form1.graph.minTree = Form1.graph.History[NumberSlides - 1];
+        }
+
+
+        private void SaveHistoryImageButton_Click(object sender, EventArgs e)
+        {
+            Form1.graph.SaveHistoryFolder(canvas);
+        }
+
+        private void SaveHistoryTextButton_Click(object sender, EventArgs e)
+        {
+            Form1.graph.SaveHistoryText();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form1.graph.SaveSlideText(CurrentSlide);
         }
     }
 }

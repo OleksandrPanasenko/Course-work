@@ -116,6 +116,11 @@ namespace GraphBase
 
         private void NodesNumber_ValueChanged(object sender, EventArgs e)
         {
+            if (NodesNumber.Value >= graph.MaxNodes)
+            {
+                NodesNumber.Value = graph.MaxNodes;
+                MessageBox.Show($"Maximum number of nodes - {graph.MaxNodes}");
+            }
             g = CreateGraphics();
             if (NodesNumber.Value < graph.Size)
             {
@@ -138,10 +143,19 @@ namespace GraphBase
 
         private void button2_Click(object sender, EventArgs e)
         {
-            graph.GetGraphMatrix(NodesNumber);
-            NodesNumber.Value = (graph.Size);
-            graph.DrawGraph();
-            FillTable();
+            try
+            {
+                graph.GetGraphMatrix(NodesNumber);
+                NodesNumber.Value = (graph.Size);
+                graph.DrawGraph();
+                FillTable();
+            }
+            catch (FileFormatException exception){ 
+                MessageBox.Show($"Invalid file format: {exception.Message}");
+            }
+            catch(ArgumentException exception) {
+                MessageBox.Show($"Wrong matrix in file: {exception.Message}");
+            }
         }
 
         private void MatrixOnForm_CellEndEdit(object sender, DataGridViewCellEventArgs e)
