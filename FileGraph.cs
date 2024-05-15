@@ -56,6 +56,29 @@ namespace GraphBase
                 file.Dispose();
             }
         }
+        
+        public void SaveSolutionConnections()
+        {
+            float[,] buffer = Matrix;
+            Matrix = new float[Size, Size];
+            for (int i = 0; i < Size; i++)
+            {
+                for (int j = 0; j < Size; j++)
+                {
+                    if (minTree[i, j] == true)
+                    {
+                        Matrix[i, j] = 1;
+                    }
+                    else
+                    {
+                        Matrix[i, j] = inf;
+                    }
+                }
+            }
+            SaveGraphMatrix();
+            Matrix = buffer;
+        }
+
         public void SaveSolutionText()
         {
             SaveFileDialog sfd = new SaveFileDialog();

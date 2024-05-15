@@ -7,7 +7,20 @@ namespace GraphBase
     {
         public static Form1 MainForm;
         public static FileGraph graph;
-        private Bitmap canvas;
+        public Bitmap canvas;
+        public ComboBox comboBox
+        {
+            get
+            {
+                return comboBox1;
+            }
+        }
+        public PictureBox pictureBox {
+            get
+            {
+                return pictureBox1;
+            }
+        }
         Graphics g;
         public Form1()
         {
@@ -128,6 +141,7 @@ namespace GraphBase
             graph.GetGraphMatrix(NodesNumber);
             NodesNumber.Value = (graph.Size);
             graph.DrawGraph();
+            FillTable();
         }
 
         private void MatrixOnForm_CellEndEdit(object sender, DataGridViewCellEventArgs e)
@@ -177,25 +191,34 @@ namespace GraphBase
 
         private void button1_Click(object sender, EventArgs e)
         {
-            switch (comboBox1.SelectedItem)
+            if (graph.Size == 0)
             {
-                case "Prim":
-                    {
-                        graph.Prim();
-                        break;
-                    }
-                case "Kruskal":
-                    {
-                        graph.Kruskal();
-                        break;
-                    }
-                case "Boruvka":
-                    {
-                        graph.Boruvka();
-                        break;
-                    }
+                MessageBox.Show("Graph is empty. It has to contain something");
             }
-            graph.DrawGraph();
+            else
+            {
+                switch (comboBox1.SelectedItem)
+                {
+                    case "Prim":
+                        {
+                            graph.Prim();
+                            break;
+                        }
+                    case "Kruskal":
+                        {
+                            graph.Kruskal();
+                            break;
+                        }
+                    case "Boruvka":
+                        {
+                            graph.Boruvka();
+                            break;
+                        }
+                }
+                new Solution();
+                Solution.solution.Show();
+                graph.DrawGraph();
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)

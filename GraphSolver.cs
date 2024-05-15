@@ -4,6 +4,20 @@ namespace GraphBase{
     public class GraphSolver:Graph{
         public float EdgeProbability=((float)1)/3;
         public int MaxRandomLength = 100;
+        public List<bool[,]> History;
+        public bool RecordHistory;
+        private void AddBackboneToHistory()
+        {
+            bool[,] copy = new bool[Size, Size];
+            for (int i = 0; i < Size; i++)
+            {
+                for (int j=0;j< Size; j++)
+                {
+                    copy[i,j] = minTree[i,j];
+                }
+            }
+            History.Add(copy);
+        }
         private bool RandomConnect()
         {
             Random rand=new Random();
@@ -55,6 +69,12 @@ namespace GraphBase{
             }
         }
         public void Kruskal(){
+            if (RecordHistory)
+            {
+                History = new List<bool[,]>();
+                AddBackboneToHistory();
+            }
+
             int TreeCount=ConnectivityBase();
             ClearBackbone();
             while(TreeCount!=ConnectivityBackbone()){
@@ -79,10 +99,17 @@ namespace GraphBase{
                     minTree[row,col]=true;
                     minTree[col,row]=true;
                 }
-                
+                if (RecordHistory) AddBackboneToHistory();
             }
         }
-        public void Prim(){
+        public void Prim()
+        {
+            if (RecordHistory)
+            {
+                History = new List<bool[,]>();
+                AddBackboneToHistory();
+            }
+
             ClearBackbone();
             for(int i=0;i<Size;i++){
                 int CurrentConnectivity=ConnectivityBackbone();
@@ -112,11 +139,19 @@ namespace GraphBase{
                             minTree[col,row]=true;
                         }
                         CurrentConnectivity=ConnectivityBackbone();
-                    }while(StartConnectivity!=CurrentConnectivity);
+                        if (RecordHistory) AddBackboneToHistory();
+                    } while(StartConnectivity!=CurrentConnectivity);
                 }
             }
         }
-        public void Boruvka(){
+        public void Boruvka()
+        {
+            if (RecordHistory)
+            {
+                History = new List<bool[,]>();
+                AddBackboneToHistory();
+            }
+
             ClearBackbone();
             float[,] MinVertices=new float[Size,3];
             int count = 0;//delete this
@@ -147,9 +182,11 @@ namespace GraphBase{
                 for(int i=0;i<Size;i++){
                     if(MinVertices[i,0]>=0&&MinVertices[i,1]>=0){
                         minTree[(int)MinVertices[i, 0], (int)MinVertices[i, 1]] = true;
+                        minTree[(int)MinVertices[i, 1], (int)MinVertices[i, 0]] = true;
                     }
                 }
                 count++;
+                if (RecordHistory) AddBackboneToHistory();
             }while(count<1000&&GoalConnectivity<ConnectivityBackbone());
             if (count == 1000)
             {

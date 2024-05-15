@@ -7,6 +7,7 @@ namespace GraphBase{
         public PictureBox canvas;
         public int cornerX = 0;
         public int cornerY=0;
+        public List <Color> colors;
         public GraphGrafics(int size,Graphics g) : base(size)
         {
             this.g = g;
@@ -31,7 +32,7 @@ namespace GraphBase{
         Color background= Color.White;
         Brush VerticeTextBrush = new SolidBrush(Color.Black);
         Brush VerticeBrush=new SolidBrush(Color.Yellow);
-        Graphics g;
+        public Graphics g;
         Font lengthFont = new Font("Arial", 8);
         public float DistanceBetweenPoints(int x1, int y1, int x2, int y2)
         {
@@ -91,6 +92,63 @@ namespace GraphBase{
                 g.DrawString($"{i+1}", lengthFont, VerticeTextBrush, new Point(x-lengthFont.Height / 2, y- lengthFont.Height / 2));
             }
         }
+        public void FillDotColors()
+        {
+            Random r = new Random();
+            colors = new List<Color>();
+            for(int i=0; i < Size; i++)
+            {
+                colors.Add(Color.FromArgb(r.Next(255), r.Next(255), r.Next(255)));
+            }
+        }
+        public void DrawFromHistory(int Slide)
+        {
+            g.Clear(background);
+            Pen EdgePen = new Pen(edge, 2);
+            Pen BackbonePen = new Pen(backbone, 3);
+            Pen NewPen = new Pen(Color.Green, 3);
+            bool[,] buffer = minTree;
+            minTree = History[Slide];
+            ConnectivityBackbone();
+            for (int i = 0; i < Size; i++)
+            {
+                for (int j = 0; j < Size; j++)
+                {
+                    if (i != j && Connected(i, j))
+                    {
+                        int x1 = nodes[i].x;
+                        int y1 = nodes[i].y;
+                        int x2 = nodes[j].x;
+                        int y2 = nodes[j].y;
+                        
+                        if (History[Slide][i,j] == true){            
+                            if (Slide > 0 && History[Slide - 1][i, j] == false)
+                            {
+                                g.DrawLine(NewPen, new Point(x1, y1), new Point(x2, y2));
+                            }
+                            else
+                            {
+                                g.DrawLine(BackbonePen, new Point(x1, y1), new Point(x2, y2));
+                            }
+                        }
+                        else { g.DrawLine(EdgePen, new Point(x1, y1), new Point(x2, y2)); }
+                        g.DrawString($"{Matrix[i, j]}", lengthFont, VerticeTextBrush, new Point((int)(x1 + x2) / 2, (int)(y1 + y2) / 2));
+
+                    }
+                }
+                canvas.Invalidate();
+
+            }
+            for (int i = 0; i < Size; i++)
+            {
+                int x = nodes[i].x;
+                int y = nodes[i].y;
+                Rectangle shape = new Rectangle(x - radius, y - radius, radius * 2, radius * 2);
+                g.FillEllipse(new SolidBrush(colors[nodes[i].color]), shape);
+                g.DrawString($"{i + 1}", lengthFont, VerticeTextBrush, new Point(x - lengthFont.Height / 2, y - lengthFont.Height / 2));
+            }
+        }
+
         public void NewDot(MouseEventArgs e) 
         {
             AddNode();
