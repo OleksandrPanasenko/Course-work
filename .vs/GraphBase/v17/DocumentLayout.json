@@ -3,6 +3,42 @@
   "WorkspaceRootPath": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\step-by-step.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|solutionrelative:step-by-step.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\step-by-step.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|solutionrelative:step-by-step.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|c:\\users\\op101\\onedrive\\desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\\graphbase\\step-by-step.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|solutionrelative:step-by-step.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\graphgrafics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|solutionrelative:graphgrafics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\graphsolver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|solutionrelative:graphsolver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|c:\\users\\op101\\onedrive\\desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\\graphbase\\help.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|solutionrelative:help.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|c:\\users\\op101\\onedrive\\desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\\graphbase\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\solution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|solutionrelative:solution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,24 +47,44 @@
       "RelativeMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|solutionrelative:solution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|c:\\users\\op101\\onedrive\\desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\\graphbase\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|c:\\users\\op101\\onedrive\\desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\\graphbase\\filegraph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|solutionrelative:filegraph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\graphgrafics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|solutionrelative:graphgrafics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|c:\\users\\op101\\onedrive\\desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\\graphbase\\askforlength.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|solutionrelative:askforlength.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|c:\\users\\op101\\onedrive\\desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\\graphbase\\stats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\askforlength.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|solutionrelative:askforlength.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\graph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|solutionrelative:graph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\stats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|solutionrelative:stats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\stats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|solutionrelative:stats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\step-by-step.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|solutionrelative:step-by-step.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|c:\\users\\op101\\onedrive\\desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\\graphbase\\stats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|solutionrelative:stats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|solutionrelative:node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\help.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|solutionrelative:help.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\help.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E75EF65-F324-40D8-A31C-C5CC0A4B5694}|GraphBase.csproj|solutionrelative:help.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +94,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -47,37 +103,39 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Form1.cs [Design]",
+              "Title": "Step-by-step.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\Step-by-step.Designer.cs",
+              "RelativeDocumentMoniker": "Step-by-step.Designer.cs",
+              "ToolTip": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\Step-by-step.Designer.cs",
+              "RelativeToolTip": "Step-by-step.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T13:53:04.973Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\Form1.cs [Design]",
-              "RelativeToolTip": "Form1.cs [Design]",
+              "ToolTip": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T21:47:04.336Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-05-16T11:52:28.677Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Step-by-step.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\Step-by-step.cs",
-              "RelativeDocumentMoniker": "Step-by-step.cs",
-              "ToolTip": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\Step-by-step.cs [Design]",
-              "RelativeToolTip": "Step-by-step.cs [Design]",
+              "Title": "Help.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\Help.cs",
+              "RelativeDocumentMoniker": "Help.cs",
+              "ToolTip": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\Help.cs [Design]",
+              "RelativeToolTip": "Help.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T20:54:23.541Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Solution.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\Solution.cs",
-              "RelativeDocumentMoniker": "Solution.cs",
-              "ToolTip": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\Solution.cs [Design]",
-              "RelativeToolTip": "Solution.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T15:41:29.926Z",
+              "WhenOpened": "2024-05-17T13:32:24.076Z",
               "EditorCaption": " [Design]"
             },
             {
@@ -88,47 +146,224 @@
               "RelativeDocumentMoniker": "GraphGrafics.cs",
               "ToolTip": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\GraphGrafics.cs",
               "RelativeToolTip": "GraphGrafics.cs",
-              "ViewState": "AQIAAOoAAAAAAAAAAAAwwAcBAABAAAAA",
+              "ViewState": "AQIAAOwAAAAAAAAAAAAUwAYBAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T17:05:12.057Z",
+              "WhenOpened": "2024-05-16T11:50:14.641Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Solution.cs",
-              "DocumentMoniker": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\Solution.cs",
-              "RelativeDocumentMoniker": "Solution.cs",
-              "ToolTip": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\Solution.cs",
-              "RelativeToolTip": "Solution.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAwCAAAABJAAAA",
+              "DocumentIndex": 1,
+              "Title": "Step-by-step.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\Step-by-step.cs",
+              "RelativeDocumentMoniker": "Step-by-step.cs",
+              "ToolTip": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\Step-by-step.cs [Design]",
+              "RelativeToolTip": "Step-by-step.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T23:38:29.823Z",
+              "WhenOpened": "2024-05-17T00:16:07.028Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Step-by-step.cs",
+              "DocumentMoniker": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\Step-by-step.cs",
+              "RelativeDocumentMoniker": "Step-by-step.cs",
+              "ToolTip": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\Step-by-step.cs",
+              "RelativeToolTip": "Step-by-step.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAIwCIAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T00:16:10.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\Form1.Designer.cs",
+              "RelativeToolTip": "Form1.Designer.cs",
+              "ViewState": "AQIAAIsAAAAAAAAAAAAcwJ8AAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T13:38:46.207Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "GraphSolver.cs",
+              "DocumentMoniker": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\GraphSolver.cs",
+              "RelativeDocumentMoniker": "GraphSolver.cs",
+              "ToolTip": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\GraphSolver.cs",
+              "RelativeToolTip": "GraphSolver.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T22:13:16.974Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Solution.cs",
+              "DocumentMoniker": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\Solution.cs",
+              "RelativeDocumentMoniker": "Solution.cs",
+              "ToolTip": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\Solution.cs",
+              "RelativeToolTip": "Solution.cs",
+              "ViewState": "AQIAAGEAAAAAAAAAAAAIwGcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T00:15:30.503Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T11:40:10.595Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Solution.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\Solution.cs",
+              "RelativeDocumentMoniker": "Solution.cs",
+              "ToolTip": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\Solution.cs [Design]",
+              "RelativeToolTip": "Solution.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T00:15:24.586Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FileGraph.cs",
+              "DocumentMoniker": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\FileGraph.cs",
+              "RelativeDocumentMoniker": "FileGraph.cs",
+              "ToolTip": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\FileGraph.cs",
+              "RelativeToolTip": "FileGraph.cs",
+              "ViewState": "AQIAAAABAAAAAAAAAAAUwBoBAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T09:03:01.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AskForLength.cs",
+              "DocumentMoniker": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\AskForLength.cs",
+              "RelativeDocumentMoniker": "AskForLength.cs",
+              "ToolTip": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\AskForLength.cs",
+              "RelativeToolTip": "AskForLength.cs",
+              "ViewState": "AQIAADgAAAAAAAAAAAAWwEwAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T00:18:27.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AskForLength.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\AskForLength.cs",
+              "RelativeDocumentMoniker": "AskForLength.cs",
+              "ToolTip": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\AskForLength.cs [Design]",
+              "RelativeToolTip": "AskForLength.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T00:18:19.082Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Graph.cs",
+              "DocumentMoniker": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\Graph.cs",
+              "RelativeDocumentMoniker": "Graph.cs",
+              "ToolTip": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\Graph.cs",
+              "RelativeToolTip": "Graph.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T00:13:44.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T00:15:12.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Node.cs",
+              "DocumentMoniker": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\Node.cs",
+              "RelativeDocumentMoniker": "Node.cs",
+              "ToolTip": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\Node.cs",
+              "RelativeToolTip": "Node.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T00:15:01.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Help.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\Help.Designer.cs",
+              "RelativeDocumentMoniker": "Help.Designer.cs",
+              "ToolTip": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\Help.Designer.cs",
+              "RelativeToolTip": "Help.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T00:14:37.595Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Help.cs",
+              "DocumentMoniker": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\Help.cs",
+              "RelativeDocumentMoniker": "Help.cs",
+              "ToolTip": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\Help.cs",
+              "RelativeToolTip": "Help.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAgwFAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T14:11:49.859Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "Stats.cs [Design]",
               "DocumentMoniker": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\Stats.cs",
               "RelativeDocumentMoniker": "Stats.cs",
               "ToolTip": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\Stats.cs [Design]",
               "RelativeToolTip": "Stats.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T14:51:05.815Z",
+              "WhenOpened": "2024-05-16T14:27:46.803Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 15,
               "Title": "Stats.cs",
               "DocumentMoniker": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\Stats.cs",
               "RelativeDocumentMoniker": "Stats.cs",
               "ToolTip": "C:\\Users\\op101\\OneDrive\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\\GraphBase\\Stats.cs",
               "RelativeToolTip": "Stats.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAwAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAA1wDIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T15:05:24.619Z",
+              "WhenOpened": "2024-05-16T14:27:52.496Z",
               "EditorCaption": ""
             }
           ]

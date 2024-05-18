@@ -1,6 +1,6 @@
 ﻿namespace GraphBase
 {
-    partial class Form1
+    partial class MinimumTree
     {
         /// <summary>
         ///  Required designer variable.
@@ -49,6 +49,7 @@
             button5 = new Button();
             openFileDialog1 = new OpenFileDialog();
             pictureBox1 = new PictureBox();
+            HelpButton = new Button();
             ((System.ComponentModel.ISupportInitialize)MatrixOnForm).BeginInit();
             ((System.ComponentModel.ISupportInitialize)NodesNumber).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -96,7 +97,6 @@
             radioButton3.TabStop = true;
             radioButton3.Text = "Move point";
             radioButton3.UseVisualStyleBackColor = true;
-            radioButton3.CheckedChanged += radioButton3_CheckedChanged;
             // 
             // contextMenuStrip1
             // 
@@ -114,7 +114,6 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(97, 28);
             comboBox1.TabIndex = 6;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // button2
             // 
@@ -159,12 +158,11 @@
             label1.Size = new Size(51, 20);
             label1.TabIndex = 11;
             label1.Text = "Matrix";
-            label1.Click += label1_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(19, 44);
+            label2.Location = new Point(13, 55);
             label2.Name = "label2";
             label2.Size = new Size(61, 20);
             label2.TabIndex = 12;
@@ -188,8 +186,6 @@
             NodesNumber.Size = new Size(79, 27);
             NodesNumber.TabIndex = 15;
             NodesNumber.ValueChanged += NodesNumber_ValueChanged;
-            NodesNumber.MouseDown += numericUpDown1_MouseDown;
-            NodesNumber.MouseUp += numericUpDown1_MouseUp;
             // 
             // label3
             // 
@@ -232,7 +228,7 @@
             // 
             pictureBox1.Location = new Point(187, 78);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(612, 370);
+            pictureBox1.Size = new Size(612, 369);
             pictureBox1.TabIndex = 19;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
@@ -241,12 +237,24 @@
             pictureBox1.MouseDown += pictureBox1_MouseDown;
             pictureBox1.MouseUp += pictureBox1_MouseUp;
             // 
-            // Form1
+            // HelpButton
+            // 
+            HelpButton.BackColor = SystemColors.Info;
+            HelpButton.Location = new Point(116, 52);
+            HelpButton.Name = "HelpButton";
+            HelpButton.Size = new Size(41, 37);
+            HelpButton.TabIndex = 20;
+            HelpButton.Text = "?";
+            HelpButton.UseVisualStyleBackColor = false;
+            HelpButton.Click += HelpButton_Click;
+            // 
+            // MinimumTree
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(813, 457);
+            Controls.Add(HelpButton);
             Controls.Add(pictureBox1);
             Controls.Add(button5);
             Controls.Add(button4);
@@ -263,12 +271,9 @@
             Controls.Add(radioButton2);
             Controls.Add(radioButton1);
             Controls.Add(button1);
-            Name = "Form1";
-            Text = "Form1";
+            Name = "MinimumTree";
+            Text = "Minimum Tree";
             Load += Form1_Load;
-            MouseClick += Form1_MouseClick;
-            MouseDown += Form1_MouseDown;
-            MouseUp += Form1_MouseUp;
             ((System.ComponentModel.ISupportInitialize)MatrixOnForm).EndInit();
             ((System.ComponentModel.ISupportInitialize)NodesNumber).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -298,5 +303,6 @@
         private Button button5;
         private OpenFileDialog openFileDialog1;
         private PictureBox pictureBox1;
+        private Button HelpButton;
     }
 }

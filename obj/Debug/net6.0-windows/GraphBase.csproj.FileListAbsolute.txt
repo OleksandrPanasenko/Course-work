@@ -3,7 +3,6 @@ C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\bin\Debug\net6.0-window
 C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\bin\Debug\net6.0-windows\GraphBase.runtimeconfig.json
 C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\bin\Debug\net6.0-windows\GraphBase.dll
 C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\bin\Debug\net6.0-windows\GraphBase.pdb
-C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\obj\Debug\net6.0-windows\GraphBase.Form1.resources
 C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\obj\Debug\net6.0-windows\GraphBase.csproj.GenerateResource.cache
 C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\obj\Debug\net6.0-windows\GraphBase.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\obj\Debug\net6.0-windows\GraphBase.AssemblyInfoInputs.cache
@@ -20,3 +19,6 @@ C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\obj\Debug\net6.0-window
 C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\obj\Debug\net6.0-windows\GraphBase.Solution.resources
 C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\obj\Debug\net6.0-windows\GraphBase.Step_by_step.resources
 C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\obj\Debug\net6.0-windows\GraphBase.Stats.resources
+C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\obj\Debug\net6.0-windows\GraphBase.Manual.resources
+C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\obj\Debug\net6.0-windows\GraphBase.Help.resources
+C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\obj\Debug\net6.0-windows\GraphBase.MinimumTree.resources

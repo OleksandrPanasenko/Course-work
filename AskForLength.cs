@@ -19,17 +19,17 @@ namespace GraphBase
         {
             askForLength = this;
             InitializeComponent();
-            Form1.MainForm.Enabled = false;
-            if (float.IsInfinity(Form1.graph.Matrix[row, column]))
+            MinimumTree.MainForm.Enabled = false;
+            if (float.IsInfinity(MinimumTree.graph.Matrix[row, column]))
             {
                 button3.Enabled = false;
-                label1.Text = $"Write a length for new edge between nodes ({row}) and ({column})";
+                label1.Text = $"Set a length for new edge between nodes ({row+1}) and ({column+1})";
             }
             else
             {
                 button3.Enabled = true;
-                label1.Text = $"Change edge between nodes ({row}) and ({column})";
-                textBox1.Text = $"{Form1.graph.Matrix[row, column]}";
+                label1.Text = $"Change edge between nodes ({row + 1}) and ({column+1})";
+                textBox1.Text = $"{MinimumTree.graph.Matrix[row, column]}";
             }
         }
 
@@ -40,17 +40,17 @@ namespace GraphBase
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form1.graph.AddEdge(row, column, Form1.graph.inf);
-            Form1.MainForm.Enabled = true;
+            MinimumTree.graph.AddEdge(row, column, MinimumTree.graph.inf);
+            MinimumTree.MainForm.Enabled = true;
             this.Close();
-            Form1.graph.DrawGraph();
+            MinimumTree.graph.DrawGraph();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form1.MainForm.Enabled = true;
+            MinimumTree.MainForm.Enabled = true;
             this.Close();
-            Form1.graph.DrawGraph();
+            MinimumTree.graph.DrawGraph();
         }
         private void AssignLength()
         {
@@ -60,17 +60,28 @@ namespace GraphBase
             {
                 if (f > 0)
                 {
-                    Form1.graph.AddEdge(row, column, f);
-                    Form1.MainForm.Enabled = true;
+                    if (f > Math.Pow(10, 30))
+                    {
+                        MessageBox.Show("Incomprehensibly low value. Vas set to infinity ('no edge')");
+                    }
+                    else
+                    {
+                        MinimumTree.graph.AddEdge(row, column, f);
+                    }
+                    MinimumTree.MainForm.Enabled = true;
                     this.Close();
-                    Form1.graph.DrawGraph();
+                    MinimumTree.graph.DrawGraph();
                 }
                 else if (f == 0)
                 {
-                    Form1.graph.AddEdge(row, column, Form1.graph.inf);
-                    Form1.MainForm.Enabled = true;
+                    if (str.Contains(",") || (str.Contains(".")||(str.Contains("-"))))
+                    {
+                        MessageBox.Show("Incomprehensibly low value. Vas set to 'no edge'");
+                    }
+                    MinimumTree.graph.AddEdge(row, column, MinimumTree.graph.inf);
+                    MinimumTree.MainForm.Enabled = true;
                     this.Close();
-                    Form1.graph.DrawGraph();
+                    MinimumTree.graph.DrawGraph();
                 }
                 else
                 {
@@ -97,8 +108,8 @@ namespace GraphBase
 
         private void AskForLength_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Form1.MainForm.Enabled = true;
-            Form1.graph.DrawGraph();
+            MinimumTree.MainForm.Enabled = true;
+            MinimumTree.graph.DrawGraph();
         }
     }
 }

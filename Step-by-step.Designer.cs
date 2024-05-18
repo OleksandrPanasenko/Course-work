@@ -120,6 +120,7 @@ namespace GraphBase
             button6.TabIndex = 8;
             button6.Text = "Current (image)";
             button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
             // 
             // SaveHistoryImageButton
             // 

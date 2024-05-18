@@ -1,11 +1,12 @@
 using System.Data;
+using System.Data.Common;
 using System.Drawing.Drawing2D;
 
 namespace GraphBase
 {
-    public partial class Form1 : Form
+    public partial class MinimumTree : Form
     {
-        public static Form1 MainForm;
+        public static MinimumTree MainForm;
         public static FileGraph graph;
         public Bitmap canvas;
         public ComboBox comboBox
@@ -15,14 +16,15 @@ namespace GraphBase
                 return comboBox1;
             }
         }
-        public PictureBox pictureBox {
+        public PictureBox pictureBox
+        {
             get
             {
                 return pictureBox1;
             }
         }
         Graphics g;
-        public Form1()
+        public MinimumTree()
         {
             InitializeComponent();
             MainForm = this;
@@ -32,41 +34,8 @@ namespace GraphBase
             graph = new FileGraph(g);
             graph.canvas = pictureBox1;
         }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numericUpDown1_MouseDown(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void numericUpDown1_MouseUp(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_MouseDown(object sender, MouseEventArgs e)
-        {
-
-
-        }
         private void FillTable()
         {
-            //MatrixOnForm.Rows.Clear();
-            //MatrixOnForm.Columns.Clear();
             while (MatrixOnForm.Columns.Count != graph.Size)
             {
                 int i = MatrixOnForm.Columns.Count;
@@ -79,17 +48,12 @@ namespace GraphBase
                 else
                 {
                     MatrixOnForm.Columns.RemoveAt(i - 1);
-                    if(MatrixOnForm.Rows.Count>1){
+                    if (MatrixOnForm.Rows.Count > 1)
+                    {
                         MatrixOnForm.Rows.RemoveAt(i - 1);
                     }
                 }
             }
-            /*for (int i = 0; i < graph.Size; i++)
-            {
-                MatrixOnForm.Columns.Add($"Column {i + 1}", $"{i + 1}");
-                MatrixOnForm.Rows.Add($"{i + 1}");
-                MatrixOnForm.Rows[i].HeaderCell.Value = $"{i + 1}";
-            }*/
             for (int row = 0; row < graph.Size; row++)
             {
                 for (int column = 0; column < graph.Size; column++)
@@ -100,18 +64,6 @@ namespace GraphBase
                     }
                 }
             }
-        }
-
-        private void Form1_MouseClick(object sender, MouseEventArgs e)
-        {
-
-
-        }
-
-        private void Form1_MouseUp(object sender, MouseEventArgs e)
-        {
-
-
         }
 
         private void NodesNumber_ValueChanged(object sender, EventArgs e)
@@ -138,7 +90,7 @@ namespace GraphBase
                 }
             }
             FillTable();
-            
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -150,10 +102,12 @@ namespace GraphBase
                 graph.DrawGraph();
                 FillTable();
             }
-            catch (FileFormatException exception){ 
+            catch (FileFormatException exception)
+            {
                 MessageBox.Show($"Invalid file format: {exception.Message}");
             }
-            catch(ArgumentException exception) {
+            catch (ArgumentException exception)
+            {
                 MessageBox.Show($"Wrong matrix in file: {exception.Message}");
             }
         }
@@ -179,11 +133,24 @@ namespace GraphBase
                 {
                     if (f > 0)
                     {
+                        if (f > Math.Pow(10, 30))
+                        {
+                            MatrixOnForm[col, row].Style.BackColor = Color.Red;
+                            Thread.Sleep(100);
+                            MessageBox.Show("Incomprehensibly large value. Vas set to infinity ('no edge')");
+                            MatrixOnForm[col, row].Style.BackColor = Color.White;
+                            MatrixOnForm[col, row].Value = null;
+                            f = graph.inf;
+                        }
                         graph.AddEdge(row, col, f);
-                        MatrixOnForm[row, col].Value = f;
+                        FillTable();
                     }
                     else if (f == 0)
                     {
+                        if ((value.Contains(",") || (value.Contains(".")||value.Contains("-"))))
+                        {
+                            MessageBox.Show("Incomprehensibly low value. Vas set to 'no edge'");
+                        }
                         graph.AddEdge(row, col, graph.inf);
                         MatrixOnForm[col, row].Value = graph.inf;
                         MatrixOnForm[row, col].Value = graph.inf;
@@ -244,6 +211,8 @@ namespace GraphBase
         private void Form1_Load(object sender, EventArgs e)
         {
             comboBox1.SelectedIndex = 0;
+            graph.DrawGraph();
+            FillTable();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -324,7 +293,13 @@ namespace GraphBase
 
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
-            
+
+        }
+
+        private void HelpButton_Click(object sender, EventArgs e)
+        {
+            new Help();
+            Help.helpForm.Show();
         }
     }
 }

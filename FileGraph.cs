@@ -82,6 +82,7 @@ namespace GraphBase
         public void SaveSolutionText()
         {
             SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "text files .txt|*.TXT";
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 string path = sfd.FileName;
@@ -125,8 +126,8 @@ namespace GraphBase
                 if(node.x > xMax) xMax = node.x;
                 if(node.y > yMax) yMax = node.y;
             }
-            float xCoefficient=(canvas.Width - 2 * radius) /(xMax-xMin);
-            float yCoefficient=(canvas.Height - 2 * radius) /(yMax-yMin);
+            float xCoefficient=(float)(canvas.Width - 2 * radius) /(xMax-xMin);
+            float yCoefficient=(float)(canvas.Height - 2 * radius) /(yMax-yMin);
             for (int i = 0;i < Size; i++)
             {
                 nodes[i].x = (int)((nodes[i].x - xMin) * xCoefficient)+radius;

@@ -6,7 +6,7 @@ namespace GraphBase{
         public float EdgeProbability=((float)1)/3;
         public int MaxRandomLength = 100;
         public List<bool[,]> History;
-        public bool RecordHistory;
+        public bool RecordHistory=true;
         public List<string> HistoryExplanation;
         public int stat_comparisons
         {
@@ -58,7 +58,7 @@ namespace GraphBase{
             }
             History.Add(copy);
         }
-        private bool RandomConnect()
+        private bool RandomConnect(float EdgeProbability)
         {
             Random rand=new Random();
             return (rand.NextDouble() < EdgeProbability) ;
@@ -149,7 +149,7 @@ namespace GraphBase{
                     stat_basicComplexity++;
                 }
                 if(row<0||col<0){
-                    throw new Exception("Prim method couldn't find minimum edge");
+                    throw new Exception("Kruskal's method couldn't find minimum edge");
                 }
                 else{
                     minTree[row,col]=true;
@@ -223,7 +223,7 @@ namespace GraphBase{
                             AddBackboneToHistory();
                             if (row >= 0)
                             {
-                                HistoryExplanation.Add($"New edge (length{Matrix[row, col]}) connected nodes {row + 1}-group {nodes[row].color + 1}; and {col + 1}-group {nodes[row].color + 1}");
+                                HistoryExplanation.Add($"New edge (length{Matrix[row, col]}) connected nodes {row + 1}-group {nodes[row].color + 1}; and {col + 1}-group {nodes[col].color + 1}");
                             }
                             else
                             {
@@ -248,7 +248,7 @@ namespace GraphBase{
             }
 
             
-            float[,] MinVertices=new float[Size,3];
+            float[,] MinEdges=new float[Size,3];
             int count = 0;//delete this
             int GoalConnectivity=ConnectivityBase();
             ConnectivityBackbone();
@@ -256,25 +256,26 @@ namespace GraphBase{
                 stat_iterations++;
                 if(RecordHistory)for_history = $"Step {History.Count}:";
                 for(int i=0;i<Size;i++){
-                    MinVertices[i,0]=-1;
-                    MinVertices[i,1]=-1;
-                    MinVertices[i,2]=inf;
+                    MinEdges[i,0]=-1;
+                    MinEdges[i,1]=-1;
+                    MinEdges[i,2]=inf;
                     stat_assigns += 3;
                     stat_basicComplexity++;
                 }
                 for(int i=0;i<Size;i++){
+                    
                     for(int j=0;j<Size;j++){
-                        if(Connected(i,j)&&nodes[i].color!=nodes[j].color){
-                            if(Matrix[i,j]<MinVertices[i,2]){
-                                MinVertices[nodes[i].color,2]=Matrix[i,j];
-                                MinVertices[nodes[i].color,0]=i;
-                                MinVertices[nodes[i].color,1]=j;
+                        if (Connected(i,j)&&nodes[i].color!=nodes[j].color){
+                            if(Matrix[i,j]<MinEdges[i,2]){
+                                MinEdges[nodes[i].color,2]=Matrix[nodes[i].color,j];
+                                MinEdges[nodes[i].color,0]=i;
+                                MinEdges[nodes[i].color,1]=j;
                                 stat_assigns+=3;
                             }
-                            if(Matrix[i,j]<MinVertices[j,2]){
-                                MinVertices[nodes[j].color,2]=Matrix[i,j];
-                                MinVertices[nodes[j].color,0]=j;
-                                MinVertices[nodes[j].color,1]=i;
+                            if(Matrix[i,j]<MinEdges[nodes[j].color,2]){
+                                MinEdges[nodes[j].color,2]=Matrix[i,j];
+                                MinEdges[nodes[j].color,0]=j;
+                                MinEdges[nodes[j].color,1]=i;
                                 stat_assigns += 3;
                             }
                             stat_comparisons += 2;
@@ -284,12 +285,12 @@ namespace GraphBase{
                     }
                 }
                 for(int i=0;i<Size;i++){
-                    if(MinVertices[i,0]>=0&&MinVertices[i,1]>=0){
-                        int row = (int)MinVertices[i, 0];
-                        int col = (int)MinVertices[i, 1];
+                    if(MinEdges[i,0]>=0&&MinEdges[i,1]>=0){
+                        int row = (int)MinEdges[i, 0];
+                        int col = (int)MinEdges[i, 1];
                         minTree[row, col] = true;
                         minTree[col, row] = true;
-                        if (RecordHistory) { for_history += $"New edge (length{Matrix[row, col]}) connected nodes {row + 1}-group {nodes[row].color + 1}; and {col + 1}-group {nodes[row].color + 1}\n"; }
+                        if (RecordHistory) { for_history += $"New edge (length{Matrix[row, col]}) connected nodes {row + 1}-group {nodes[row].color + 1}; and {col + 1}-group {nodes[col].color + 1}\n"; }
                         stat_assigns += 4;
                     }
                     stat_comparisons++;
@@ -312,7 +313,7 @@ namespace GraphBase{
             for(int i = 1; i < Size; i++) {
                 for(int j=0;j<=i; j++)
                 {
-                    if (i != j && RandomConnect())
+                    if (i != j && RandomConnect((float)(1.0 / Math.Sqrt(Size))))
                     {
                         AddEdge(i, j, random.Next(MaxRandomLength) + 1);
                     }

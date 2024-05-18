@@ -91,6 +91,10 @@ namespace GraphBase{
                 }
                 g.DrawString($"{i+1}", lengthFont, VerticeTextBrush, new Point(x-lengthFont.Height / 2, y- lengthFont.Height / 2));
             }
+            if (Size == 0)
+            {
+                g.Clear(background);   
+            }
         }
         public void FillDotColors()
         {
@@ -246,10 +250,10 @@ namespace GraphBase{
             if (selectedNode >= 0)
             {
                 CheckAndSelectNode(e);
-                int obstacle = selectedNode;
-                if (obstacle != selectedNode || DistanceBetweenPoints(nodes[obstacle].x, nodes[obstacle].y, xNew, yNew) >= radius * 2)
+                int obstacle = selectedNode>=0?selectedNode:movingNode;
+                if (obstacle == movingNode && DistanceBetweenPoints(nodes[obstacle].x, nodes[obstacle].y, xNew, yNew) >= radius * 2)
                 {
-                    if (xNew >= 0 && xNew >= 0 && xNew <= canvas.Width && xNew <= canvas.Height)
+                    if (xNew >= 0 && xNew >= 0 && xNew <= canvas.Width && yNew <= canvas.Height)
                     {
                         nodes[movingNode].x = xNew;
                         nodes[movingNode].y = yNew;

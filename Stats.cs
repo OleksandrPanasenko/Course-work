@@ -18,14 +18,14 @@ namespace GraphBase
             string end = Environment.NewLine;
             InitializeComponent();
             string ToBox = "";
-            ToBox += $"Total iterations: {Form1.graph.stat_iterations}{end}{end}";
-            ToBox += $"Nodes: {Form1.graph.stat_vertices}{end}";
-            ToBox += $"Edges: {Form1.graph.stat_edges}{end}{end}";
-            ToBox += $"Total graph weight: {Form1.graph.stat_total_weight} {end}";
-            ToBox += $"Minimum tree weight: {Form1.graph.stat_solution_weight} {end}{end}";
-            ToBox += $"Complexity: {Form1.graph.stat_basicComplexity}{end}";
-            ToBox += $"Comparisons: {Form1.graph.stat_comparisons} {end}";
-            ToBox += $"Var settings: {Form1.graph.stat_assigns}";
+            ToBox += $"Total iterations: {MinimumTree.graph.stat_iterations}{end}{end}";
+            ToBox += $"Nodes: {MinimumTree.graph.stat_vertices}{end}";
+            ToBox += $"Edges: {MinimumTree.graph.stat_edges}{end}{end}";
+            ToBox += $"Total graph weight: {MinimumTree.graph.stat_total_weight} {end}";
+            ToBox += $"Minimum tree weight: {MinimumTree.graph.stat_solution_weight} {end}{end}";
+            ToBox += $"Complexity: {MinimumTree.graph.stat_basicComplexity}{end}";
+            ToBox += $"Comparisons: {MinimumTree.graph.stat_comparisons} {end}";
+            ToBox += $"Var settings: {MinimumTree.graph.stat_assigns}";
             this.textBox1.Text = ToBox;
             statsForm = this;
         }
