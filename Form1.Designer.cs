@@ -198,7 +198,6 @@
             // 
             // saveFileDialog1
             // 
-            saveFileDialog1.FileOk += saveFileDialog1_FileOk;
             // 
             // button4
             // 
@@ -231,7 +230,6 @@
             pictureBox1.Size = new Size(612, 369);
             pictureBox1.TabIndex = 19;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
             pictureBox1.Paint += pictureBox1_Paint;
             pictureBox1.MouseClick += pictureBox1_MouseClick;
             pictureBox1.MouseDown += pictureBox1_MouseDown;

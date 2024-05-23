@@ -30,7 +30,7 @@ namespace GraphBase
             MinimumTree.graph.canvas = pictureBox2;
             MinimumTree.graph.g = Graphics.FromImage(canvas); ;
             MinimumTree.MainForm.Enabled = false;
-            label1.Text = MinimumTree.MainForm.comboBox.SelectedItem as string;
+            label1.Text = MinimumTree.MainForm.comboBox.SelectedItem as string+"'s method";
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

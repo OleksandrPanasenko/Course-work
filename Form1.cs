@@ -62,6 +62,8 @@ namespace GraphBase
                     {
                         MatrixOnForm[row, column].Value = graph.Matrix[row, column];
                     }
+                    else if(MatrixOnForm[row, column].Value!=null&& MatrixOnForm[row, column].Value!=graph.inf as object)
+                            MatrixOnForm[row, column].Value = null;
                 }
             }
         }
@@ -90,6 +92,8 @@ namespace GraphBase
                 }
             }
             FillTable();
+            graph.DrawGraph();
+            pictureBox1.Invalidate();
 
         }
 
@@ -157,13 +161,13 @@ namespace GraphBase
                     }
                     else
                     {
-                        MessageBox.Show($"Cell({row};{col}): You tried to input negative number", "No negatives allowed!");
+                        MessageBox.Show($"Cell({row+1};{col+1}): You tried to input negative number", "No negatives allowed!");
                         MatrixOnForm[col, row].Value = graph.Matrix[row, col];
                     }
                 }
                 else
                 {
-                    MessageBox.Show($"Cell({row};{col}): No number detected", "Only non-negative numbers allowed");
+                    MessageBox.Show($"Cell({row+1};{col+1}): No number detected", "Only non-negative numbers allowed");
                     MatrixOnForm[col, row].Value = graph.Matrix[row, col];
                 }
             }
@@ -233,16 +237,6 @@ namespace GraphBase
         private void button5_Click(object sender, EventArgs e)
         {
             graph.SaveImageGraph(canvas);
-        }
-
-        private void saveFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)

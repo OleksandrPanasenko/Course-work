@@ -19,6 +19,5 @@ C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\obj\Debug\net6.0-window
 C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\obj\Debug\net6.0-windows\GraphBase.Solution.resources
 C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\obj\Debug\net6.0-windows\GraphBase.Step_by_step.resources
 C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\obj\Debug\net6.0-windows\GraphBase.Stats.resources
-C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\obj\Debug\net6.0-windows\GraphBase.Manual.resources
 C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\obj\Debug\net6.0-windows\GraphBase.Help.resources
 C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\obj\Debug\net6.0-windows\GraphBase.MinimumTree.resources

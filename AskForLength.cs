@@ -62,7 +62,7 @@ namespace GraphBase
                 {
                     if (f > Math.Pow(10, 30))
                     {
-                        MessageBox.Show("Incomprehensibly low value. Vas set to infinity ('no edge')");
+                        MessageBox.Show("Incomprehensibly large value. Vas set to infinity ('no edge')");
                     }
                     else
                     {
@@ -94,9 +94,6 @@ namespace GraphBase
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-        }
 
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {

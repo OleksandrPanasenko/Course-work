@@ -23,7 +23,6 @@ namespace GraphBase{
         public int radius = 10;
         public int Mode; //which radiobutton is tapped
         int selectedNode=-1;
-        Color main = Color.Yellow;
         Color edge = Color.Brown;
         Color backbone = Color.Blue;
         Color SelectedRemoveNode = Color.Red;
@@ -162,9 +161,15 @@ namespace GraphBase{
             }
             else
             {
-                AddNode();
-                nodes[Size - 1].x = e.X;
-                nodes[Size - 1].y = e.Y;
+                if (!Overlaps(e.X, e.Y, Size)) {
+                    AddNode();
+                    nodes[Size - 1].x = e.X;
+                    nodes[Size - 1].y = e.Y;
+                }
+                else
+                {
+                    MessageBox.Show("Dots should not overlap!");
+                }
             }
             DrawGraph();
         }
@@ -249,11 +254,10 @@ namespace GraphBase{
             int movingNode = selectedNode;
             if (selectedNode >= 0)
             {
-                CheckAndSelectNode(e);
-                int obstacle = selectedNode>=0?selectedNode:movingNode;
-                if (obstacle == movingNode && DistanceBetweenPoints(nodes[obstacle].x, nodes[obstacle].y, xNew, yNew) >= radius * 2)
+                
+                if (!Overlaps(xNew,yNew,selectedNode))
                 {
-                    if (xNew >= 0 && xNew >= 0 && xNew <= canvas.Width && yNew <= canvas.Height)
+                    if (xNew >= 0 && yNew >= 0 && xNew <= canvas.Width && yNew <= canvas.Height)
                     {
                         nodes[movingNode].x = xNew;
                         nodes[movingNode].y = yNew;
@@ -270,6 +274,17 @@ namespace GraphBase{
                 selectedNode = -1;
                 DrawGraph();
             }
+        }
+        public bool Overlaps(int x, int y, int point)
+        {
+            for(int i = 0;i<Size;i++)
+            {
+                if (i != point && DistanceBetweenPoints(x, y, nodes[i].x, nodes[i].y) <= 2 * radius)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
         public void StartEdge(MouseEventArgs e)
         {

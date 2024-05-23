@@ -62,16 +62,6 @@ namespace GraphBase
 
         }
 
-        private void Help_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Help_Shown(object sender, EventArgs e)
-        {
-
-        }
-
         private void Close_Click(object sender, EventArgs e)
         {
             Close();

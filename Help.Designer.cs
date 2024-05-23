@@ -69,8 +69,6 @@
             Controls.Add(textBox1);
             Name = "Help";
             Text = "Help";
-            Load += Help_Load;
-            Shown += Help_Shown;
             ResumeLayout(false);
             PerformLayout();
         }

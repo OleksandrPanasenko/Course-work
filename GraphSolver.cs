@@ -3,7 +3,6 @@ using System.Security.Claims;
 namespace GraphBase{
     public class GraphSolver:Graph{
         public int MaxNodes = 100;
-        public float EdgeProbability=((float)1)/3;
         public int MaxRandomLength = 100;
         public List<bool[,]> History;
         public bool RecordHistory=true;
@@ -42,7 +41,8 @@ namespace GraphBase{
                         if (minTree[i,j]) stat_solution_weight += Matrix[i, j];
                     }
                 }
-                return weight;
+                stat_solution_weight /= 2;
+                return weight/2;
             }
         }
         public int stat_vertices { get  { return Size; } }
@@ -113,6 +113,8 @@ namespace GraphBase{
             stat_assigns = 0;
             stat_basicComplexity = 0;
             stat_iterations = 0;
+            stat_comparisons = 0;
+            stat_solution_weight = 0;
         }
         public void Kruskal(){
             statsToZero();
@@ -162,7 +164,7 @@ namespace GraphBase{
                     AddBackboneToHistory();
                     if (row >= 0)
                     {
-                        HistoryExplanation.Add($"From{row} to {col}, length {Matrix[row, col]} - Shortest edge between different groups");
+                        HistoryExplanation.Add($"From {row} to {col}, length {Matrix[row, col]} - Shortest edge between different groups");
                     }
                     else
                     {
@@ -170,6 +172,7 @@ namespace GraphBase{
                     }
                 }
             }
+            HistoryExplanation.Add("Finished!");
         }
         public void Prim()
         {
@@ -266,8 +269,8 @@ namespace GraphBase{
                     
                     for(int j=0;j<Size;j++){
                         if (Connected(i,j)&&nodes[i].color!=nodes[j].color){
-                            if(Matrix[i,j]<MinEdges[i,2]){
-                                MinEdges[nodes[i].color,2]=Matrix[nodes[i].color,j];
+                            if(Matrix[i,j]<MinEdges[nodes[i].color, 2]){
+                                MinEdges[nodes[i].color,2]=Matrix[i,j];
                                 MinEdges[nodes[i].color,0]=i;
                                 MinEdges[nodes[i].color,1]=j;
                                 stat_assigns+=3;
