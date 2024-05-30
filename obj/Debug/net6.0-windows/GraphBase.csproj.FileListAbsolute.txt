@@ -14,7 +14,6 @@ C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\obj\Debug\net6.0-window
 C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\obj\Debug\net6.0-windows\GraphBase.genruntimeconfig.cache
 C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\obj\Debug\net6.0-windows\ref\GraphBase.dll
 C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\obj\Debug\net6.0-windows\GraphBase.sourcelink.json
-C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\obj\Debug\net6.0-windows\GraphBase.Form2.resources
 C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\obj\Debug\net6.0-windows\GraphBase.AskForLength.resources
 C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\obj\Debug\net6.0-windows\GraphBase.Solution.resources
 C:\Users\op101\OneDrive\Desktop\Курсова\GraphBase\obj\Debug\net6.0-windows\GraphBase.Step_by_step.resources
