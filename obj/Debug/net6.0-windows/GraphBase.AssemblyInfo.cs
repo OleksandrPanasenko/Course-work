@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GraphBase")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+62b115dcb71cf6c6dc9ef3c41e69f156dc969e58")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5829d04138c3eba38fa606f0f7f97ae17edb0186")]
 [assembly: System.Reflection.AssemblyProductAttribute("GraphBase")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GraphBase")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
