@@ -126,12 +126,15 @@ namespace GraphBase
                 if(node.x > xMax) xMax = node.x;
                 if(node.y > yMax) yMax = node.y;
             }
-            float xCoefficient=(float)(canvas.Width - 2 * radius) /(xMax-xMin);
-            float yCoefficient=(float)(canvas.Height - 2 * radius) /(yMax-yMin);
-            for (int i = 0;i < Size; i++)
+            if (xMin < 0 || xMax > canvas.Width || yMin < 0 || yMax > canvas.Height)
             {
-                nodes[i].x = (int)((nodes[i].x - xMin) * xCoefficient)+radius;
-                nodes[i].y = (int)((nodes[i].y - yMin) * yCoefficient)+radius;
+                float xCoefficient = (float)(canvas.Width - 2 * radius) / (xMax - xMin);
+                float yCoefficient = (float)(canvas.Height - 2 * radius) / (yMax - yMin);
+                for (int i = 0; i < Size; i++)
+                {
+                    nodes[i].x = (int)((nodes[i].x - xMin) * xCoefficient) + radius;
+                    nodes[i].y = (int)((nodes[i].y - yMin) * yCoefficient) + radius;
+                }
             }
         }
         public void GetGraphMatrix(NumericUpDown upDown)
