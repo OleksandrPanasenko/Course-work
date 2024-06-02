@@ -21,10 +21,10 @@ namespace GraphBase{
                 {
                     for (int j = 0; j < Size; j++)
                     {
-                        if (minTree[i, j] == true) toReturn++;
+                        if (Connected(i,j)) toReturn++;
                     }
                 }
-                return toReturn;
+                return toReturn/2;
             } }
         public float stat_solution_weight { get; private set; }
         public float stat_total_weight
